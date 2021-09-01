@@ -8,13 +8,14 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.barbeariakotlin.R
-import com.example.barbeariakotlin.databinding.FragmentGalleryBinding
+import com.example.barbeariakotlin.databinding.FragmentFeedBinding
 
 class GalleryFragment : Fragment() {
 
     private lateinit var galleryViewModel: GalleryViewModel
-    private var _binding: FragmentGalleryBinding? = null
+    private var _binding: FragmentFeedBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -28,13 +29,17 @@ class GalleryFragment : Fragment() {
         galleryViewModel =
             ViewModelProvider(this).get(GalleryViewModel::class.java)
 
-        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        _binding = FragmentFeedBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textGallery
+        val textView: TextView = binding.textIntroMelhor
         galleryViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+
+        _binding!!.buttonIniciar1.setOnClickListener {
+            findNavController().navigate(R.id.action_nav_iniciar_to_nav_feed)
+        }
         return root
     }
 

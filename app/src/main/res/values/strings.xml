@@ -15,4 +15,6 @@ tincidunt neque, eget malesuada ipsum. In tincidunt, orci id sagittis
 volutpat, diam metus blandit mi, vel auctor lectus tortor porttitor dolor.
 Integer libero lorem, feugiat et sem a, vehicula ultricies tellus.</string>
     <string name="text_ja_tem_conta">Já tem uma conta?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

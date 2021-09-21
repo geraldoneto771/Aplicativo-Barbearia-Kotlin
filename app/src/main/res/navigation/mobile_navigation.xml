@@ -6,10 +6,10 @@
     app:startDestination="@id/nav_iniciar">
 
     <fragment
-        android:id="@+id/nav_feed"
+        android:id="@+id/nav_login"
         android:name="com.example.barbeariakotlin.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login" />
 
     <fragment
         android:id="@+id/nav_iniciar"
@@ -18,7 +18,7 @@
         tools:layout="@layout/fragment_feed" >
         <action
             android:id="@+id/action_nav_iniciar_to_nav_feed"
-            app:destination="@id/nav_feed" />
+            app:destination="@id/nav_login" />
     </fragment>
 
     <fragment

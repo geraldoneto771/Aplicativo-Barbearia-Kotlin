@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/brackground_01"
     tools:context=".ui.registre.CadastroCorteFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -71,16 +72,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_description_corte"/>
 
+    <RadioGroup
+        android:id="@+id/photoSide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_description_corte"
+        app:layout_constraintStart_toStartOf="@+id/edit_description_corte"
+        app:layout_constraintTop_toBottomOf="@+id/edit_price_corte">
+
+
+        <RadioButton
+            android:id="@+id/exclusivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:checked="true"
+            android:text="Exclusivo" />
+
+        <RadioButton
+            android:id="@+id/comprovativo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="Comprovativo" />
+
+    </RadioGroup>
+
     <ImageButton
         android:id="@+id/add_image_corte"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_menu_gallery"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_price_corte" />
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/edit_description_corte"
+        app:layout_constraintTop_toBottomOf="@+id/edit_description_corte" />
 
+    <Button
+        android:id="@+id/button_save_corte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="salvar"
+        app:layout_constraintEnd_toEndOf="@+id/edit_description_corte"
+        app:layout_constraintStart_toStartOf="@+id/edit_description_corte"
+        app:layout_constraintTop_toBottomOf="@+id/photoSide"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

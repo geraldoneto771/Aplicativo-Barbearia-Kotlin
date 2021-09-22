@@ -7,9 +7,13 @@
 
     <fragment
         android:id="@+id/nav_login"
-        android:name="com.example.barbeariakotlin.ui.home.HomeFragment"
+        android:name="com.example.barbeariakotlin.ui.login.LoginFragment"
         android:label="@string/login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_nav_login_to_cadastro_corte"
+            app:destination="@id/cadastroCorte" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_iniciar"
@@ -28,7 +32,7 @@
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/cadastroCorte"
-        android:name="com.example.barbeariakotlin.CadastroCorte"
+        android:name="com.example.barbeariakotlin.ui.registre.CadastroCorteFragment"
         android:label="fragment_cadastro_corte"
         tools:layout="@layout/fragment_cadastro_corte" />
 </navigation>

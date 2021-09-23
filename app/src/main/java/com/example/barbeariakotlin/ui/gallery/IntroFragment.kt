@@ -9,13 +9,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.example.barbeariakotlin.R
-import com.example.barbeariakotlin.databinding.FragmentFeedBinding
+import com.example.barbeariakotlin.databinding.FragmentIntroBinding
 
-class GalleryFragment : Fragment() {
+class IntroFragment : Fragment() {
 
-    private lateinit var galleryViewModel: GalleryViewModel
-    private var _binding: FragmentFeedBinding? = null
+    private lateinit var introViewModel: IntroViewModel
+    private var _binding: FragmentIntroBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -26,19 +25,19 @@ class GalleryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        galleryViewModel =
-            ViewModelProvider(this).get(GalleryViewModel::class.java)
+        introViewModel =
+            ViewModelProvider(this).get(IntroViewModel::class.java)
 
-        _binding = FragmentFeedBinding.inflate(inflater, container, false)
+        _binding = FragmentIntroBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textIntroMelhor
-        galleryViewModel.text.observe(viewLifecycleOwner, Observer {
+        introViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
 
         _binding!!.buttonIniciar1.setOnClickListener {
-            findNavController().navigate(GalleryFragmentDirections.actionNavIniciarToNavFeed())
+            findNavController().navigate(IntroFragmentDirections.actionNavIniciarToNavLogin())
         }
         return root
     }

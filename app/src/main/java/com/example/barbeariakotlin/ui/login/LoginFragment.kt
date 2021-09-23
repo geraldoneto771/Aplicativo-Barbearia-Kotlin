@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.example.barbeariakotlin.R
 import com.example.barbeariakotlin.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -31,8 +30,14 @@ class LoginFragment : Fragment() {
 
         })
 
+        // Login
         mBinding.buttonLogin.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.actionNavLoginToCadastroCorte())
+        }
+
+        // Registro de usuário
+        mBinding.textRegistreUser.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionNavLoginToNavRegistreUser())
         }
 
         return mBinding.root

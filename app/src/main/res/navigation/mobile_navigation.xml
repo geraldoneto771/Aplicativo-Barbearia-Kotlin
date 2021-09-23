@@ -14,24 +14,26 @@
             android:id="@+id/action_nav_login_to_cadastro_corte"
             app:destination="@id/cadastroCorte"
             app:popUpTo="@id/navLogin" />
+        <action
+            android:id="@+id/action_navLogin_to_navRegistreUser"
+            app:destination="@id/navRegistreUser" />
     </fragment>
 
     <fragment
         android:id="@+id/navIniciar"
-        android:name="com.example.barbeariakotlin.ui.gallery.GalleryFragment"
+        android:name="com.example.barbeariakotlin.ui.gallery.IntroFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_feed" >
+        tools:layout="@layout/fragment_intro" >
         <action
-            android:id="@+id/action_nav_iniciar_to_nav_feed"
-            app:destination="@id/navLogin"
-            app:popUpTo="@id/navIniciar" />
+            android:id="@+id/action_navIniciar_to_navLogin"
+            app:destination="@id/navLogin" />
     </fragment>
 
     <fragment
-        android:id="@+id/navSlideshow"
-        android:name="com.example.barbeariakotlin.ui.slideshow.SlideshowFragment"
+        android:id="@+id/navRegistreUser"
+        android:name="com.example.barbeariakotlin.ui.login.RegistreUserFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_registre_user" />
     <fragment
         android:id="@+id/cadastroCorte"
         android:name="com.example.barbeariakotlin.ui.registre.CadastroCorteFragment"

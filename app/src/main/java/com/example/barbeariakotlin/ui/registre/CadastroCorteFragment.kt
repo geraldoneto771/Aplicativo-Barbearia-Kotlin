@@ -1,6 +1,5 @@
 package com.example.barbeariakotlin.ui.registre
 
-import android.app.Activity
 import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.os.Bundle
@@ -9,11 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import com.example.barbeariakotlin.R
 import com.example.barbeariakotlin.databinding.FragmentCadastroCorteBinding
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.nav_header_main.*
-
 
 class CadastroCorteFragment : Fragment() {
 

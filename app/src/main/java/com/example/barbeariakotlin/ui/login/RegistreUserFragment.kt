@@ -13,11 +13,8 @@ import com.example.barbeariakotlin.databinding.FragmentRegistreUserBinding
 class RegistreUserFragment : Fragment() {
 
     private lateinit var registreUserViewModel: RegistreUserViewModel
-    private var _binding: FragmentRegistreUserBinding? = null
+    private lateinit var mBinding: FragmentRegistreUserBinding
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,18 +24,15 @@ class RegistreUserFragment : Fragment() {
         registreUserViewModel =
             ViewModelProvider(this).get(RegistreUserViewModel::class.java)
 
-        _binding = FragmentRegistreUserBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        mBinding = FragmentRegistreUserBinding.inflate(inflater, container, false)
 
-        val textView: TextView = binding.textSlideshow
         registreUserViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
+
         })
-        return root
+        return mBinding.root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
     }
 }

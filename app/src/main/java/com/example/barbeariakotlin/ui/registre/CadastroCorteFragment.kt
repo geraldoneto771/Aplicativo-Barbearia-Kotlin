@@ -1,35 +1,32 @@
 package com.example.barbeariakotlin.ui.registre
 
-import android.Manifest
 import android.app.Activity
+import android.app.Activity.RESULT_OK
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.graphics.drawable.BitmapDrawable
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
-import androidx.core.content.FileProvider
-import androidx.navigation.fragment.findNavController
+import android.widget.ImageView
+import com.example.barbeariakotlin.R
 import com.example.barbeariakotlin.databinding.FragmentCadastroCorteBinding
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.nav_header_main.*
-import java.io.File
-import java.io.IOException
-import kotlin.jvm.Throws
 
 
 class CadastroCorteFragment : Fragment() {
 
     private lateinit var mBinding: FragmentCadastroCorteBinding
 
+    private lateinit var imageView: ImageView
 
+    companion object {
+        val IMAGE_REQUEST_CODE = 100
+    }
+    /*val uriPathHelper = URIPathHelper()
+    val filePath = uriPathHelper.getPath(this, YOUR_URI_OBJECT)
+*/
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -67,16 +64,15 @@ class CadastroCorteFragment : Fragment() {
     private fun openGalleryForImage() {
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"
-        startActivityForResult(intent, REQUEST_CODE)
+        startActivityForResult(intent, IMAGE_REQUEST_CODE)
 
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE){
-            imageView.setImageURI(data?.data) // handle chosen image
+        if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK){
+            mBinding.imgRegistreCorte.setImageURI(data?.data) // handle chosen image
         }
     }
 
-    val REQUEST_CODE = 100
 }

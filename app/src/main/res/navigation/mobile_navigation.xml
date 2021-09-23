@@ -3,30 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/nav_iniciar">
+    app:startDestination="@id/navIniciar">
 
     <fragment
-        android:id="@+id/nav_login"
+        android:id="@+id/navLogin"
         android:name="com.example.barbeariakotlin.ui.login.LoginFragment"
         android:label="@string/login"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_nav_login_to_cadastro_corte"
-            app:destination="@id/cadastroCorte" />
+            app:destination="@id/cadastroCorte"
+            app:popUpTo="@id/navLogin" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_iniciar"
+        android:id="@+id/navIniciar"
         android:name="com.example.barbeariakotlin.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_feed" >
         <action
             android:id="@+id/action_nav_iniciar_to_nav_feed"
-            app:destination="@id/nav_login" />
+            app:destination="@id/navLogin"
+            app:popUpTo="@id/navIniciar" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/navSlideshow"
         android:name="com.example.barbeariakotlin.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />

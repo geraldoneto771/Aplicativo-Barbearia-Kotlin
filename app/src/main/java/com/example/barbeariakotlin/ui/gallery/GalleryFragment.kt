@@ -38,7 +38,7 @@ class GalleryFragment : Fragment() {
         })
 
         _binding!!.buttonIniciar1.setOnClickListener {
-            findNavController().navigate(R.id.action_nav_iniciar_to_nav_feed)
+            findNavController().navigate(GalleryFragmentDirections.actionNavIniciarToNavFeed())
         }
         return root
     }

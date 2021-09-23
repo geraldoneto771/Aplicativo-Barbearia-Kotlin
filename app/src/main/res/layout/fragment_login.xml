@@ -21,32 +21,31 @@
         android:id="@+id/text_login_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
         android:text="Lo"
-        android:textSize="24sp"
         android:textColor="@color/white"
-        android:layout_marginVertical="20dp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginHorizontal="34dp"
+        app:layout_constraintEnd_toStartOf="@+id/text_login_2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
     <TextView
         android:id="@+id/text_login_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="gin"
-        android:textSize="24sp"
         android:textColor="#4C5F8F"
-        android:layout_marginVertical="20dp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginHorizontal="28dp"
-        app:layout_constraintStart_toStartOf="@+id/text_login_1"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+        app:layout_constraintStart_toEndOf="@+id/text_login_1"
+        app:layout_constraintTop_toBottomOf="@id/logo"/>
 
     <EditText
         android:id="@+id/edit_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:layout_marginHorizontal="35dp"
         android:hint="Digite o usuário"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,12 +65,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="100dp"
         android:text="Logar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_password"
         style="@style/DefaultButton"/>
+
+    <TextView
+        android:id="@+id/text_registre_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="34dp"
+        android:layout_marginTop="20dp"
+        android:text="Não possui uma conta? Registre-se!"
+        android:textColor="#704C9E"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/button_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

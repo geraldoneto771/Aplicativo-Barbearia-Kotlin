@@ -32,7 +32,7 @@ class LoginFragment : Fragment() {
         })
 
         mBinding.buttonLogin.setOnClickListener {
-            findNavController().navigate(R.id.action_nav_login_to_cadastro_corte)
+            findNavController().navigate(LoginFragmentDirections.actionNavLoginToCadastroCorte())
         }
 
         return mBinding.root

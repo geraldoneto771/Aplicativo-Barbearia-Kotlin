@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_navLogin_to_navRegistreUser"
             app:destination="@id/navRegistreUser" />
+        <action
+            android:id="@+id/action_navLogin_to_listCortes"
+            app:destination="@id/listCortes" />
     </fragment>
 
     <fragment
@@ -44,4 +47,9 @@
         android:name="com.example.barbeariakotlin.ui.registre.CadastroCorteFragment"
         android:label="fragment_cadastro_corte"
         tools:layout="@layout/fragment_cadastro_corte" />
+    <fragment
+        android:id="@+id/listCortes"
+        android:name="com.example.barbeariakotlin.ListCortes"
+        android:label="fragment_list_cortes"
+        tools:layout="@layout/fragment_list_cortes" />
 </navigation>

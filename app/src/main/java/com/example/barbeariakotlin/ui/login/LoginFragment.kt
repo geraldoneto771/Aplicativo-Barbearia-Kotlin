@@ -32,7 +32,7 @@ class LoginFragment : Fragment() {
 
         // Login
         mBinding.buttonLogin.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionNavLoginToCadastroCorte())
+            findNavController().navigate(LoginFragmentDirections.actionNavLoginToListCortes())
         }
 
         // Registro de usuário

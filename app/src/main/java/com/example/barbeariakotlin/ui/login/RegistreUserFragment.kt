@@ -8,7 +8,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.barbeariakotlin.databinding.FragmentRegistreUserBinding
+import com.google.android.material.snackbar.Snackbar
 
 class RegistreUserFragment : Fragment() {
 
@@ -25,6 +27,11 @@ class RegistreUserFragment : Fragment() {
             ViewModelProvider(this).get(RegistreUserViewModel::class.java)
 
         mBinding = FragmentRegistreUserBinding.inflate(inflater, container, false)
+
+        mBinding.buttonRegistreUser.setOnClickListener {
+            findNavController().navigate(RegistreUserFragmentDirections.actionNavRegistreUserToNavLogin())
+            Snackbar.make(mBinding.root, "Usuário registrado com sucesso!!!", Snackbar.LENGTH_LONG).show()
+        }
 
         registreUserViewModel.text.observe(viewLifecycleOwner, Observer {
 

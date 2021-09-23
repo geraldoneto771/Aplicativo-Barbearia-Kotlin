@@ -33,7 +33,12 @@
         android:id="@+id/navRegistreUser"
         android:name="com.example.barbeariakotlin.ui.login.RegistreUserFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_registre_user" />
+        tools:layout="@layout/fragment_registre_user" >
+        <action
+            android:id="@+id/action_navRegistreUser_to_navLogin"
+            app:destination="@id/navLogin"
+            app:popUpTo="@id/navLogin" />
+    </fragment>
     <fragment
         android:id="@+id/cadastroCorte"
         android:name="com.example.barbeariakotlin.ui.registre.CadastroCorteFragment"

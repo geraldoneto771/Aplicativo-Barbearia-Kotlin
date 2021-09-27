@@ -49,7 +49,7 @@
         tools:layout="@layout/fragment_cadastro_corte" />
     <fragment
         android:id="@+id/listCortes"
-        android:name="com.example.barbeariakotlin.ListCortes"
+        android:name="com.example.barbeariakotlin.ui.cortes.ListCortes"
         android:label="fragment_list_cortes"
         tools:layout="@layout/fragment_list_cortes" />
 </navigation>

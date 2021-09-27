@@ -29,8 +29,6 @@ class LoginFragment : Fragment() {
         loginViewModel.text.observe(viewLifecycleOwner, Observer {
 
         })
-
-        // Login
         mBinding.buttonLogin.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.actionNavLoginToListCortes())
         }

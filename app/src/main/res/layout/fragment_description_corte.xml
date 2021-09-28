@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/brackground_01"
+    tools:context=".descriptionCorte">
+
+    <ImageView
+        android:id="@+id/img_registre_corte"
+        android:layout_width="246dp"
+        android:layout_height="223dp"
+        android:src="@drawable/icon_cadastro_corte"
+        android:layout_marginTop="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_name_corte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome corte"
+        android:textSize="20sp"
+        android:textColor="#272D49"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_registre_corte" />
+
+    <TextView
+        android:id="@+id/text_registre_new_corte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_intro_1"
+        android:textSize="16sp"
+        android:textColor="#272D49"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_name_corte"/>
+
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#9266E4"
+        android:padding="6dp"
+        android:text="R$"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_toStartOf="@id/price"
+        app:layout_constraintStart_toStartOf="@id/text_registre_new_corte"
+        app:layout_constraintTop_toBottomOf="@+id/text_registre_new_corte"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#9266E4"
+        android:paddingVertical="6dp"
+        android:text="0"
+        android:paddingHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintStart_toEndOf="@+id/txt_price"
+        app:layout_constraintTop_toBottomOf="@+id/text_registre_new_corte"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

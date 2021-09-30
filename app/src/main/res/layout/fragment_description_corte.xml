@@ -12,7 +12,7 @@
         android:id="@+id/img_registre_corte"
         android:layout_width="246dp"
         android:layout_height="223dp"
-        android:src="@drawable/icon_cadastro_corte"
+        android:src="@drawable/corte_1"
         android:layout_marginTop="55dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,5 +74,18 @@
         android:layout_alignParentEnd="true"
         app:layout_constraintStart_toEndOf="@+id/txt_price"
         app:layout_constraintTop_toBottomOf="@+id/text_registre_new_corte"/>
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Logar"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price"
+        style="@style/DefaultButton"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.barbeariakotlin
+package com.example.barbeariakotlin.ui.cortes
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,10 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.example.barbeariakotlin.databinding.FragmentDescriptionCorteBinding
-import com.example.barbeariakotlin.ui.cortes.CorteViewModel
 
 
-class descriptionCorte : Fragment() {
+class DescriptionCorte : Fragment() {
 
     private lateinit var mBinding: FragmentDescriptionCorteBinding
     private lateinit var mViewModel: CorteViewModel
@@ -22,6 +21,7 @@ class descriptionCorte : Fragment() {
 
         mBinding = FragmentDescriptionCorteBinding.inflate(inflater)
         mViewModel = ViewModelProvider(requireActivity()).get(CorteViewModel::class.java)
+
 
         // Inflate the layout for this fragment
         return mBinding.root

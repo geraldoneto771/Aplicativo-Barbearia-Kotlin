@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/brackground_01"
-    tools:context=".descriptionCorte">
+    tools:context=".ui.cortes.descriptionCorte">
 
     <ImageView
         android:id="@+id/img_registre_corte"

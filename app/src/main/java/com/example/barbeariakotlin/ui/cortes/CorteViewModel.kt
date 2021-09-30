@@ -17,4 +17,6 @@ class CorteViewModel : ViewModel() {
 
     // Função pegar as informações do corte no repositorio local
     fun getAllCorte() {CorteDB().getAll(_cortes)}
+
+
 }

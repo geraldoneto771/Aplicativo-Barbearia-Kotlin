@@ -27,6 +27,7 @@ class RepositoryDB {
         }
     }
 
+
     fun getAll(_corte: MutableLiveData<ArrayList<CorteModel>>) {
         val realm = Realm.getDefaultInstance()
 

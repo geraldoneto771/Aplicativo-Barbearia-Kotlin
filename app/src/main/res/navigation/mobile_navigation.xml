@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/navIniciar"
-        android:name="com.example.barbeariakotlin.ui.gallery.IntroFragment"
+        android:name="com.example.barbeariakotlin.ui.intro.IntroFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_intro" >
         <action
@@ -57,7 +57,7 @@
     </fragment>
     <fragment
         android:id="@+id/descriptionCorte"
-        android:name="com.example.barbeariakotlin.descriptionCorte"
+        android:name="com.example.barbeariakotlin.ui.cortes.descriptionCorte"
         android:label="fragment_description_corte"
         tools:layout="@layout/fragment_description_corte" />
 </navigation>

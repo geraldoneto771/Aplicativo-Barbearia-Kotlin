@@ -1,4 +1,4 @@
-package com.example.barbeariakotlin.ui.gallery
+package com.example.barbeariakotlin.ui.intro
 
 import android.os.Bundle
 import android.view.LayoutInflater

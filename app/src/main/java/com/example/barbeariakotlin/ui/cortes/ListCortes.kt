@@ -37,11 +37,13 @@ class ListCortes : Fragment() {
 
         mViewModel.cortes.observe(viewLifecycleOwner, Observer {
             mBinding.recyclerView.adapter = CorteAdapter(it)
-            mBinding.recyclerView.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
+            mBinding.recyclerView.layoutManager =
+                LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
         })
 
         return mBinding.root
     }
+
 
     inner class CorteAdapter(val list: ArrayList<CorteModel>):
             RecyclerView.Adapter<CorteAdapter.CorteViewHolder>() {
@@ -66,11 +68,17 @@ class ListCortes : Fragment() {
 
             holder.bind.fieldName.text = corte.name
             holder.bind.price.text = corte.price.toString()
+
+            holder.bind.relative1.setOnClickListener {
+                findNavController().navigate(ListCortesDirections.actionListCortesToDescriptionCorte())
+            }
         }
 
         override fun getItemCount(): Int {
             return list.size
         }
+
+
 
 
     }

@@ -17,9 +17,8 @@
             app:cardPreventCornerOverlap="false"
             app:cardUseCompatPadding="true"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-
+            android:layout_marginHorizontal="40dp"
+            android:gravity="center"
             app:layout_constraintTop_toTopOf="parent">
 
             <RelativeLayout
@@ -36,27 +35,35 @@
                     android:text="Corte"
                     android:textColor="#000"
                     android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/descriptionCorte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_default_description"
+                    android:textColor="#939393"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginHorizontal="45dp"/>
 
                 <TextView
                     android:id="@+id/txt_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#9266E4"
-                    android:padding="6dp"
                     android:text="R$"
-                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textColor="#272D49"
                     android:textSize="16sp"
+                    android:layout_alignParentTop="true"
                     android:layout_toStartOf="@id/price" />
 
                 <TextView
                     android:id="@+id/price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#9266E4"
-                    android:paddingVertical="6dp"
                     android:text="0"
-                    android:paddingHorizontal="16dp"
-                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textColor="#272D49"
                     android:textSize="16sp"
                     android:layout_alignParentEnd="true"/>
 

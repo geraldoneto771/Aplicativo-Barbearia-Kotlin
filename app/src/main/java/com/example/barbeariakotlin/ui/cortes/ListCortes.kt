@@ -11,21 +11,21 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.barbeariakotlin.R
-import com.example.barbeariakotlin.databinding.FragmentListCortesBinding
 import com.example.barbeariakotlin.databinding.ItemCorteUI
+import com.example.barbeariakotlin.databinding.ListCorteUI
 import com.example.barbeariakotlin.model.CorteModel
 
 
 class ListCortes : Fragment() {
 
-    private lateinit var mBinding: FragmentListCortesBinding
+    private lateinit var mBinding: ListCorteUI
     private lateinit var mViewModel: CorteViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        mBinding = FragmentListCortesBinding.inflate(inflater)
+        mBinding = ListCorteUI.inflate(inflater)
 
         mViewModel = ViewModelProvider(requireActivity()).get(CorteViewModel::class.java)
 
@@ -68,6 +68,7 @@ class ListCortes : Fragment() {
 
             holder.bind.fieldName.text = corte.name
             holder.bind.price.text = corte.price.toString()
+            holder.bind.descriptionCorte.text = corte.description.toString()
 
             holder.bind.relative1.setOnClickListener {
                 findNavController().navigate(ListCortesDirections.actionListCortesToDescriptionCorte())

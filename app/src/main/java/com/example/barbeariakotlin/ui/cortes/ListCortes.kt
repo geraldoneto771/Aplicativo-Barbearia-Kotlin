@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -45,7 +46,7 @@ class ListCortes : Fragment() {
     }
 
 
-    inner class CorteAdapter(val list: ArrayList<CorteModel>):
+    class CorteAdapter(val list: ArrayList<CorteModel>):
             RecyclerView.Adapter<CorteAdapter.CorteViewHolder>() {
 
                 inner class CorteViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
@@ -70,9 +71,6 @@ class ListCortes : Fragment() {
             holder.bind.price.text = corte.price.toString()
             holder.bind.descriptionCorte.text = corte.description.toString()
 
-            holder.bind.relative1.setOnClickListener {
-                findNavController().navigate(ListCortesDirections.actionListCortesToDescriptionCorte())
-            }
         }
 
         override fun getItemCount(): Int {

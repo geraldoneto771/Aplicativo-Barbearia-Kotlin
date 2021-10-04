@@ -31,16 +31,12 @@ class RepositoryDB {
     fun getAll(_corte: MutableLiveData<ArrayList<CorteModel>>) {
         val realm = Realm.getDefaultInstance()
 
-        realm.addChangeListener {
             val corte = realm.where<CorteModel>().findAll()
-            var list = ArrayList<CorteModel>()
 
+            var list = ArrayList<CorteModel>()
             list.addAll(corte)
-            list = ArrayList<CorteModel>()
-            list.addAll(corte)
-            _corte.postValue(list)
 
             _corte.value = list
-        }
+
     }
 }

@@ -15,7 +15,8 @@
             app:destination="@id/navRegistreUser" />
         <action
             android:id="@+id/action_navLogin_to_listCortes"
-            app:destination="@id/listCortes" />
+            app:destination="@id/listCortes"
+            app:popUpTo="@id/listCortes" />
     </fragment>
 
     <fragment
@@ -50,10 +51,12 @@
         tools:layout="@layout/fragment_list_cortes" >
         <action
             android:id="@+id/action_listCortes_to_cadastroCorte"
-            app:destination="@id/cadastroCorte" />
+            app:destination="@id/cadastroCorte"
+            app:popUpTo="@id/listCortes" />
         <action
             android:id="@+id/action_listCortes_to_descriptionCorte"
-            app:destination="@id/descriptionCorte" />
+            app:destination="@id/descriptionCorte"
+            app:popUpTo="@id/listCortes" />
     </fragment>
     <fragment
         android:id="@+id/descriptionCorte"

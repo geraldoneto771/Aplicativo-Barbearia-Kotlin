@@ -6,70 +6,27 @@
     <data class="ListCorteUI"/>
 
 <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraint"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/brackground_01">
-
-
-    <TextView
-        android:id="@+id/text_admin"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Geraldo"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"/>
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="177dp"
-        android:layout_height="245dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/text_intro_melhor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="80dp"
-        android:text="Lista de cortes"
-        android:textAlignment="center"
-        android:textColor="@color/purple_700"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
-
-    <EditText
-        android:id="@+id/search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginTop="16dp"
-        android:hint="Pesquise por um modelo de corte..."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_intro_melhor"/>
 
     <LinearLayout
         android:id="@+id/linear_layout_lista_cortes"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/search">
+        android:layout_marginTop="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="16dp"
-            tools:listitem="@layout/item_corte"/>
+            tools:listitem="@layout/item_corte" />
 
     </LinearLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
